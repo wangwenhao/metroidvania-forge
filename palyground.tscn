@@ -26,9 +26,6 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
 shape = SubResource("RectangleShape2D_thpbf")
 
-[node name="Player" parent="." instance=ExtResource("1_yceto")]
-position = Vector2(221, 61)
-
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(-0.9999995, 133)
 scale = Vector2(1.0625008, 8.968749)
@@ -84,3 +81,6 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D6/StaticBody2D"]
 shape = SubResource("RectangleShape2D_thpbf")
+
+[node name="Player" parent="." instance=ExtResource("1_yceto")]
+position = Vector2(221, 61)
