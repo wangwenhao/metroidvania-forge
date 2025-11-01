@@ -10,13 +10,14 @@ const DEBUG_JUMP_INDICATOR = preload("uid://1n5lkptfbcul")
 var states: Array[PlayerState]
 var current_state: PlayerState:
 	get: return states.front()
-var last_state: PlayerState:
+var previous_state: PlayerState:
 	get: return states[1]
 #endregion
 
 #region /// Standard Variables
 var dirction: Vector2 = Vector2.ZERO
 var gravity: float = 980
+var gravity_multiplier: float = 1
 #endregion
 
 func _ready() -> void:
@@ -30,7 +31,7 @@ func _process(_delta: float) -> void:
 	change_state(current_state.process(_delta))
 	
 func _physics_process(_delta: float) -> void:
-	velocity.y += gravity * _delta
+	velocity.y += gravity * _delta * gravity_multiplier
 	move_and_slide()
 	change_state(current_state.physics_process(_delta))
 
