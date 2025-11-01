@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfa3xni5hj64u"]
+[gd_scene load_steps=6 format=3 uid="uid://cfa3xni5hj64u"]
 
 [ext_resource type="Script" uid="uid://bua8arleo2w4n" path="res://player/scripts/player.gd" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://cbivi5ugh7ei" path="res://player/states/idle.gd" id="2_rkbax"]
+[ext_resource type="Script" uid="uid://dho5sm7xiahw7" path="res://player/states/run.gd" id="3_g1dw6"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kqu6x"]
 size = Vector2(18, 48)
@@ -18,3 +20,23 @@ offset = Vector2(0, -24)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -23)
 shape = SubResource("RectangleShape2D_kqu6x")
+
+[node name="State" type="Node" parent="."]
+
+[node name="Idle" type="Node" parent="State"]
+unique_name_in_owner = true
+script = ExtResource("2_rkbax")
+
+[node name="Run" type="Node" parent="State"]
+unique_name_in_owner = true
+script = ExtResource("3_g1dw6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -27.0
+offset_top = -66.0
+offset_right = 27.0
+offset_bottom = -49.0
+theme_override_font_sizes/font_size = 12
+text = "State"
+horizontal_alignment = 1
+vertical_alignment = 1
