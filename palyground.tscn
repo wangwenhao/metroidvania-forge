@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bukuiusarajki"]
+[gd_scene load_steps=8 format=3 uid="uid://bukuiusarajki"]
 
 [ext_resource type="PackedScene" uid="uid://cfa3xni5hj64u" path="res://player/player.tscn" id="1_yceto"]
 
@@ -12,6 +12,16 @@ height = 32
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_thpbf"]
 size = Vector2(32, 32)
+
+[sub_resource type="Gradient" id="Gradient_yceto"]
+colors = PackedColorArray(0.032865047, 0, 1, 1, 1, 1, 1, 0.5019608)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_thpbf"]
+gradient = SubResource("Gradient_yceto")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yceto"]
+size = Vector2(64, 64)
 
 [node name="Playground" type="Node2D"]
 
@@ -81,6 +91,31 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D6/StaticBody2D"]
 shape = SubResource("RectangleShape2D_thpbf")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(239, -8)
+scale = Vector2(15.937501, 1)
+texture = SubResource("GradientTexture2D_yceto")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D7/StaticBody2D"]
+shape = SubResource("RectangleShape2D_thpbf")
+
+[node name="OneWayPlatform" type="Sprite2D" parent="."]
+position = Vector2(239.99998, 160)
+scale = Vector2(1.4531246, 0.17773443)
+texture = SubResource("GradientTexture2D_thpbf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="OneWayPlatform"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OneWayPlatform/StaticBody2D"]
+scale = Vector2(0.9999998, 0.9999999)
+shape = SubResource("RectangleShape2D_yceto")
+one_way_collision = true
 
 [node name="Player" parent="." instance=ExtResource("1_yceto")]
 position = Vector2(221, 61)

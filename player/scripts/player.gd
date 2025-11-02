@@ -2,6 +2,13 @@ class_name Player extends CharacterBody2D
 
 const DEBUG_JUMP_INDICATOR = preload("uid://1n5lkptfbcul")
 
+#region /// On Ready Variables
+@onready var sprite: Sprite2D = $Sprite2D
+@onready var collision_stand: CollisionShape2D = $CollisionStand
+@onready var collision_crouch: CollisionShape2D = $CollisionCrouch
+@onready var one_way_platform_ray_cast: RayCast2D = $OneWayPlatformRayCast
+#endregion
+
 #region /// Export Variables
 @export var move_speed: float = 150
 #endregion
