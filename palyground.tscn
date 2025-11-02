@@ -118,4 +118,4 @@ shape = SubResource("RectangleShape2D_yceto")
 one_way_collision = true
 
 [node name="Player" parent="." instance=ExtResource("1_yceto")]
-position = Vector2(221, 61)
+position = Vector2(193, 90)

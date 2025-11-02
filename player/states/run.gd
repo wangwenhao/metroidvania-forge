@@ -4,6 +4,7 @@ func init() -> void:
 	pass
 
 func enter() -> void:
+	player.animation_player.play("Run")
 	pass
 	
 func exit() -> void:
