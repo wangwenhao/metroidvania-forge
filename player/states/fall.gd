@@ -40,7 +40,7 @@ func process(delta: float) -> PlayerState:
 
 func physics_process(_delta: float) -> PlayerState:
 	if player.is_on_floor():
-		player.add_debug_indicator(Color.RED)
+		#player.add_debug_indicator(Color.RED)
 		if buffer_timer > 0:
 			return jump
 		return idle

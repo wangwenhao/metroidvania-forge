@@ -47,7 +47,7 @@ func _physics_process(_delta: float) -> void:
 
 func initialize_state() -> void:
 	states = []
-	for c in $State.get_children():
+	for c in $States.get_children():
 		if c is PlayerState:
 			states.append(c)
 			c.player = self

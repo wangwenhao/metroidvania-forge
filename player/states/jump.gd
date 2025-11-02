@@ -8,12 +8,12 @@ func init() -> void:
 func enter() -> void:
 	player.animation_player.play("Jump")
 	player.animation_player.pause()
-	player.add_debug_indicator(Color.LIME_GREEN)
+	#player.add_debug_indicator(Color.LIME_GREEN)
 	player.velocity.y = -jump_velocity
 	pass
 	
 func exit() -> void:
-	player.add_debug_indicator(Color.YELLOW)
+	#player.add_debug_indicator(Color.YELLOW)
 	pass
 
 func handle_input(event: InputEvent) -> PlayerState:

@@ -111,27 +111,28 @@ size = Vector2(16, 3)
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 0
 collision_mask = 3
+floor_snap_length = 2.0
 script = ExtResource("1_oul6g")
 
-[node name="State" type="Node" parent="."]
+[node name="States" type="Node" parent="."]
 
-[node name="Idle" type="Node" parent="State"]
+[node name="Idle" type="Node" parent="States"]
 unique_name_in_owner = true
 script = ExtResource("2_rkbax")
 
-[node name="Run" type="Node" parent="State"]
+[node name="Run" type="Node" parent="States"]
 unique_name_in_owner = true
 script = ExtResource("3_g1dw6")
 
-[node name="Jump" type="Node" parent="State"]
+[node name="Jump" type="Node" parent="States"]
 unique_name_in_owner = true
 script = ExtResource("4_yw30f")
 
-[node name="Fall" type="Node" parent="State"]
+[node name="Fall" type="Node" parent="States"]
 unique_name_in_owner = true
 script = ExtResource("5_qjkh3")
 
-[node name="Crouch" type="Node" parent="State"]
+[node name="Crouch" type="Node" parent="States"]
 unique_name_in_owner = true
 script = ExtResource("6_g6k8r")
 
@@ -152,6 +153,7 @@ shape = SubResource("CapsuleShape2D_rgyib")
 disabled = true
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -27.0
 offset_top = -72.0
 offset_right = 27.0
