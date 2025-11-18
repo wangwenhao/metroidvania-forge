@@ -22,6 +22,7 @@ func enter() -> void:
 	
 func exit() -> void:
 	player.gravity_multiplier = 1.0
+	buffer_timer = 0
 	pass
 
 func handle_input(event: InputEvent) -> PlayerState:
