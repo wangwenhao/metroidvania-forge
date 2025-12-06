@@ -74,6 +74,7 @@ action={
 
 2d_physics/layer_1="Ground"
 2d_physics/layer_2="One Way Platform"
+2d_physics/layer_5="Player"
 
 [rendering]
 
