@@ -19,7 +19,7 @@ tile_map_data = PackedByteArray("AAAJAAEAAQAHAAwAAAAJAAIAAQAHAA0AAAAKAAEAAQAIAAw
 tile_set = ExtResource("2_vv2jw")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAFAAIAAQAQAAYAAAAGAAIAAQARAAYAAAAHAAIAAQASAAYAAAAIAAIAAQATAAYAAAAFAAQAAQAAAAYAAAAGAAQAAQABAAYAAAAHAAQAAQACAAYAAAAIAAQAAQADAAYAAAAJAAQAAQAEAAYAAAAKAAQAAQAFAAYAAAA=")
+tile_map_data = PackedByteArray("AAAFAAIAAQAQAAYAAAAGAAIAAQARAAYAAAAHAAIAAQATAAYAAAAFAAQAAQAAAAYAAAAGAAQAAQABAAYAAAAHAAQAAQACAAYAAAAIAAQAAQADAAYAAAAJAAQAAQAEAAYAAAAKAAQAAQAFAAYAAAA=")
 tile_set = ExtResource("2_vv2jw")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -27,7 +27,7 @@ tile_map_data = PackedByteArray("AAAAAAMAAQAEAAsAAAAAAAQAAQAEAAoAAAABAAMAAQAFAAs
 tile_set = ExtResource("2_vv2jw")
 
 [node name="LevelTransition" parent="." instance=ExtResource("3_vv2jw")]
-position = Vector2(160, -32)
+position = Vector2(160, -64)
 size = 3
 location = 2
 target_level = "uid://cc0jawhlxy1go"
